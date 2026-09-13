@@ -4,14 +4,14 @@
 const PROJECT = {
   nome: "Professor Global",
   subtitulo: "Redesign visual, pagamento seguro e catálogo dinâmico ao longo de 5 meses.",
-  atualizadoEm: "2026-09-07", // formato AAAA-MM-DD, mude toda vez que atualizar
+  atualizadoEm: "2026-09-13", // formato AAAA-MM-DD, mude toda vez que atualizar
 };
 
 const CHECKLIST = [
   {
     mes: "Mês 1",
     itens: [
-      { texto: "Levantamento técnico detalhado e organização do plano de arquitetura", feito: false },
+      { texto: "Levantamento técnico detalhado e organização do plano de arquitetura", feito: true },
       { texto: "Início da identidade visual profissional (design system, páginas principais)", feito: false },
       {
         texto: "Planejamento técnico da integração de pagamento seguro",
