@@ -4,7 +4,7 @@
 const PROJECT = {
   nome: "Professor Global",
   subtitulo: "Redesign visual, pagamento seguro e catálogo dinâmico ao longo de 5 meses.",
-  atualizadoEm: "2026-09-13", // formato AAAA-MM-DD, mude toda vez que atualizar
+  atualizadoEm: "2026-09-16", // formato AAAA-MM-DD, mude toda vez que atualizar
 };
 
 const CHECKLIST = [
@@ -63,5 +63,18 @@ const CHECKLIST = [
       { texto: "Suporte à estabilização da plataforma", feito: false },
       { texto: "Relatório final de ciclo e alinhamento da próxima fase", feito: false },
     ],
+  },
+];
+
+// Trabalho extra, fora dos itens acordados nos 5 meses acima — feito por
+// iniciativa própria após a auditoria técnica, sem custo adicional.
+const EXTRAS = [
+  {
+    data: "2026-09-16",
+    texto: "Correção de uma vulnerabilidade crítica de execução remota de código, atualizando o Next.js para a versão mais recente e segura.",
+  },
+  {
+    data: "2026-09-16",
+    texto: "Adição de limite de tentativas (rate limiting) no login e cadastro, para dificultar ataques de força bruta em contas de alunos.",
   },
 ];
