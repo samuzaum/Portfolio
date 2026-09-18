@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Professor Global — Opções Visuais</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2336255c'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1c1a22;--paper:#f7f6f3;--surface:#fff;--line:#dcd8d0;--muted:#7a7570;
+    --accent:#36255c;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'Space Mono',monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:56px 20px 90px}
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:40px}
+  .eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+  h1{font-size:32px;font-weight:800;letter-spacing:-.01em;margin:0 0 8px}
+  .subtitulo{color:var(--muted);margin:0;max-width:64ch;line-height:1.55}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;text-decoration:none;color:inherit;display:block;transition:border-color .15s, transform .15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card-num{font-family:var(--font-mono);font-size:12px;color:var(--muted);display:block;margin-bottom:8px}
+  .card h2{font-size:18px;margin:0 0 10px}
+  .card p{color:var(--muted);font-size:14px;line-height:1.55;margin:0 0 14px}
+  .swatches{display:flex;gap:6px;margin-bottom:6px}
+  .sw{width:20px;height:20px;border-radius:4px;border:1px solid rgba(0,0,0,.1)}
+  .open{font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-family:var(--font-mono);font-size:11.5px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Identidade visual · Item 2 do Mês 1</p>
+      <h1>Professor Global — Opções Visuais</h1>
+      <p class="subtitulo">Quatro direções de design para a landing page do produto, pra comparar lado a lado antes de escolher um caminho. A opção 1 é a reprodução fiel do que já está no ar hoje; as outras três exploram direções novas de identidade visual.</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="1-atual/">
+        <span class="card-num">01</span>
+        <div class="swatches"><span class="sw" style="background:#05060f"></span><span class="sw" style="background:#00E0C2"></span><span class="sw" style="background:#8B7CF6"></span></div>
+        <h2>Atual (referência)</h2>
+        <p>O design que já está em produção hoje: fundo escuro espacial, estrelas e equações animadas, gradientes teal/roxo, mascote cientista. Salvo aqui como ponto de comparação.</p>
+        <span class="open">Ver opção 1 →</span>
+      </a>
+
+      <a class="card" href="2-institucional/">
+        <span class="card-num">02</span>
+        <div class="swatches"><span class="sw" style="background:#F7F5F0"></span><span class="sw" style="background:#0B2545"></span><span class="sw" style="background:#C89B3C"></span></div>
+        <h2>Totalmente nova — Institucional</h2>
+        <p>Direção séria e sóbria: fundo claro, azul-marinho e dourado, tipografia serifada, sem animações lúdicas. Pensada para transmitir confiança e credibilidade acadêmica.</p>
+        <span class="open">Ver opção 2 →</span>
+      </a>
+
+      <a class="card" href="3-hibrida/">
+        <span class="card-num">03</span>
+        <div class="swatches"><span class="sw" style="background:#F6F7FC"></span><span class="sw" style="background:#0B5FFF"></span><span class="sw" style="background:#7C5CF6"></span></div>
+        <h2>Híbrida</h2>
+        <p>Meio-termo real: estrutura clara e organizada como a institucional, mas com a energia cromática e a tipografia da versão atual. Mascote trocado por um mockup de celular com o chat da IA.</p>
+        <span class="open">Ver opção 3 →</span>
+      </a>
+
+      <a class="card" href="4-diferente/">
+        <span class="card-num">04</span>
+        <div class="swatches"><span class="sw" style="background:#F4F1E9"></span><span class="sw" style="background:#111111"></span><span class="sw" style="background:#FF4B1F"></span></div>
+        <h2>Totalmente diferente — Editorial</h2>
+        <p>Ruptura de verdade: papel off-white, tinta preta, um único laranja de impacto, tipografia gigante estilo pôster, bordas grossas e sombra dura. Nada de gradiente ou animação.</p>
+        <span class="open">Ver opção 4 →</span>
+      </a>
+    </div>
+
+    <footer>Professor Global · opções visuais geradas para decisão do Item 2 (identidade visual) do Mês 1</footer>
+  </div>
+</body>
+</html>
