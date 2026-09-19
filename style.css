@@ -426,20 +426,6 @@ html[data-theme="light"] .theme-toggle-star {
 .btn-ghost { background: transparent; border-color: transparent; text-transform: none; letter-spacing: 0; font-weight: 600; color: var(--slate); }
 .btn-ghost:hover { color: var(--ink); border-color: transparent; transform: none; box-shadow: none; }
 
-/* ── Marquee ───────────────────────────────────────────────── */
-.marquee-strip {
-  background: var(--surface-2); overflow: hidden; padding: .9rem 0;
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-}
-.marquee-track { display: flex; width: max-content; animation: scroll-marquee 36s linear infinite; }
-.marquee-item {
-  font-size: .88rem; font-weight: 500;
-  color: var(--slate); padding-right: 1.4rem; white-space: nowrap;
-  display: flex; align-items: center; gap: .7rem;
-}
-.marquee-item::after { content: '★'; color: var(--accent); font-size: .7rem; opacity: .7; }
-@keyframes scroll-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
 /* ── Section titles ────────────────────────────────────────── */
 .section-title {
   font-family: var(--font-impact); text-transform: uppercase; font-weight: 400;
