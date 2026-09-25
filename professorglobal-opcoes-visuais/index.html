@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Professor Global · Opções Visuais</title>
+<title>Professor Global · Decisões Pendentes</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2336255c'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,10 @@
   .eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
   h1{font-size:32px;font-weight:800;letter-spacing:-.01em;margin:0 0 8px}
   .subtitulo{color:var(--muted);margin:0;max-width:64ch;line-height:1.55}
+  .secao-titulo{font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin:36px 0 8px}
+  .secao-desc{color:var(--muted);font-size:14px;line-height:1.55;margin:0 0 20px;max-width:64ch}
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .card-wide{margin-top:0}
   @media(max-width:760px){.grid{grid-template-columns:1fr}}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;text-decoration:none;color:inherit;display:block;transition:border-color .15s, transform .15s}
   .card:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -36,10 +39,13 @@
 <body>
   <div class="wrap">
     <header>
-      <p class="eyebrow">Identidade visual · Item 2 do Mês 1</p>
-      <h1>Professor Global · Opções Visuais</h1>
-      <p class="subtitulo">Quatro direções de design para a landing page do produto, pra comparar lado a lado antes de escolher um caminho. A opção 1 é a reprodução fiel do que já está no ar hoje; as outras três exploram direções novas de identidade visual.</p>
+      <p class="eyebrow">Mês 1 · Decisões pendentes</p>
+      <h1>Professor Global · Decisões Pendentes</h1>
+      <p class="subtitulo">Os dois pontos do Mês 1 que dependem de uma escolha antes de seguir adiante: qual direção visual seguir, e qual gateway de pagamento integrar no Mês 2.</p>
     </header>
+
+    <h2 class="secao-titulo">Decisão 1 · Identidade visual (Item 2)</h2>
+    <p class="secao-desc">Quatro direções de design para a landing page do produto, pra comparar lado a lado. A opção 1 é a reprodução fiel do que já está no ar hoje; as outras três exploram direções novas.</p>
 
     <div class="grid">
       <a class="card" href="1-atual/">
@@ -75,7 +81,18 @@
       </a>
     </div>
 
-    <footer>Professor Global · opções visuais geradas para decisão do Item 2 (identidade visual) do Mês 1</footer>
+    <h2 class="secao-titulo">Decisão 2 · Gateway de pagamento (Item 3)</h2>
+    <p class="secao-desc">Comparação entre Mercado Pago e PagSeguro, com taxas, parcelamento e como cada um valida a assinatura do webhook de pagamento.</p>
+
+    <a class="card card-wide" href="gateway-pagamento/">
+      <span class="card-num">05</span>
+      <div class="swatches"><span class="sw" style="background:#36255c"></span><span class="sw" style="background:#8A5D1E"></span></div>
+      <h2>Mercado Pago vs. PagSeguro</h2>
+      <p>Taxas de Pix e cartão, parcelamento máximo, e a diferença mais importante pro projeto: como cada um permite validar a assinatura do webhook, o ponto de segurança mais crítico do sistema de pagamento hoje.</p>
+      <span class="open">Ver comparação →</span>
+    </a>
+
+    <footer>Professor Global · decisões pendentes do Mês 1 (identidade visual e pagamento seguro)</footer>
   </div>
 </body>
 </html>

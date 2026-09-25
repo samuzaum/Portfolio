@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Professor Global · Gateway de Pagamento</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2336255c'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1c1a22;--paper:#f7f6f3;--surface:#fff;--line:#dcd8d0;--muted:#7a7570;
+    --accent:#36255c;--accent-soft:rgba(54,37,92,.08);--green:#1b6b3d;--green-soft:rgba(27,107,61,.08);
+    --font-sans:'Inter',system-ui,sans-serif;--font-mono:'Space Mono',monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:56px 20px 90px}
+  .back{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:24px}
+  .back:hover{color:var(--accent)}
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:32px}
+  .eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+  h1{font-size:32px;font-weight:800;letter-spacing:-.01em;margin:0 0 8px}
+  .subtitulo{color:var(--muted);margin:0;max-width:64ch;line-height:1.55}
+
+  h2{font-size:18px;font-weight:700;margin:36px 0 14px}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface)}
+  th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--paper);white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td:first-child{font-weight:600;color:var(--muted);white-space:nowrap}
+  .mp{color:var(--accent);font-weight:700}
+  .ps{color:#8A5D1E;font-weight:700}
+
+  .callout{border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin-top:18px;font-size:13.5px;line-height:1.6;color:var(--muted)}
+  .callout strong{color:var(--ink)}
+
+  .reco{border:1px solid var(--accent);background:var(--accent-soft);border-radius:6px;padding:20px 22px;margin-top:36px}
+  .reco .tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);margin-bottom:10px}
+  .reco .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .reco p{margin:0;font-size:14.5px;line-height:1.6}
+  .reco p+p{margin-top:10px}
+
+  .decisao{margin-top:40px;border-top:1px solid var(--line);padding-top:28px}
+  .decisao p{color:var(--muted);font-size:14.5px;line-height:1.6;max-width:60ch}
+
+  .fontes{margin-top:44px;padding-top:18px;border-top:1px solid var(--line)}
+  .fontes summary{font-family:var(--font-mono);font-size:11.5px;color:var(--muted);cursor:pointer}
+  .fontes ul{margin:12px 0 0;padding-left:18px;font-size:13px;color:var(--muted);line-height:1.8}
+  .fontes a{color:var(--muted)}
+
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-family:var(--font-mono);font-size:11.5px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../">&larr; voltar pras opções visuais</a>
+
+    <header>
+      <p class="eyebrow">Planejamento técnico · Item 3 do Mês 1</p>
+      <h1>Gateway de Pagamento</h1>
+      <p class="subtitulo">Comparação entre os dois gateways mais usados no Brasil para Pix e cartão parcelado, levantada em setembro de 2026, para decidir qual integrar no Mês 2. A Asaas foi deixada de fora dessa comparação a pedido.</p>
+    </header>
+
+    <h2>Comparação</h2>
+    <div class="tablewrap">
+      <table>
+        <tr><th></th><th class="mp">Mercado Pago</th><th class="ps">PagSeguro (PagBank)</th></tr>
+        <tr><td>Pix</td><td>0,99% (ou 0,49% para CNPJ faturando R$15k+/mês)</td><td>até 1,89% (há condição com 0,35%, não fica claro quando se aplica)</td></tr>
+        <tr><td>Cartão à vista</td><td>3,98% a 4,98%, conforme prazo de recebimento</td><td>3,19% a 4,99%, conforme prazo de recebimento</td></tr>
+        <tr><td>Cartão parcelado</td><td>taxa adicional por parcela (não detalhada nas fontes)</td><td>3,79% a 5,59%, conforme prazo de recebimento</td></tr>
+        <tr><td>Parcelamento máximo</td><td>não encontrado um limite claro</td><td>até 18x</td></tr>
+        <tr><td>Pix parcelado</td><td>até 12x, taxa 0% em condição promocional pra novo vendedor</td><td>não encontrado esse recurso</td></tr>
+        <tr><td>Validação de webhook</td><td>biblioteca oficial no SDK Node (<code>WebhookSignatureValidator</code>), poucas linhas de código</td><td>validação manual via HMAC SHA256 com o header <code>x-authenticity-token</code>, mais trabalho de implementação</td></tr>
+        <tr><td>Documentação</td><td>reclamações de desenvolvedores encontradas em fóruns</td><td>nenhuma reclamação equivalente encontrada, mas busca não é conclusiva</td></tr>
+      </table>
+    </div>
+
+    <div class="callout">
+      <strong>Ressalva importante:</strong> taxas de gateway de pagamento mudam com frequência e variam por bandeira de cartão, volume de vendas e negociação individual da conta. Os números acima vêm de tabelas públicas encontradas nesta pesquisa, não são uma cotação garantida. Vale confirmar direto com cada gateway antes de fechar.
+    </div>
+
+    <div class="reco">
+      <span class="tag"><span class="dot"></span> Inclinação técnica</span>
+      <p><strong>Mercado Pago.</strong> O SDK oficial em Node.js já vem com um validador de assinatura de webhook pronto, o que resolve exatamente a brecha de segurança já identificada no projeto (webhook sem validação), com bem menos código do que a validação manual do PagSeguro.</p>
+      <p>A taxa de Pix também é visivelmente menor (0,99% contra até 1,89%), e o Pix parcelado a custo zero, mesmo que promocional, combina bem com o modelo de venda de curso parcelado que a plataforma já tem no banco de dados.</p>
+    </div>
+
+    <div class="decisao">
+      <h2>O que falta decidir</h2>
+      <p>Essa é uma decisão de negócio, não só técnica. Escolhido o gateway, o planejamento técnico do Item 3 (desenho do fluxo de checkout, variáveis de ambiente e validação do webhook) começa em seguida, antes da integração de fato acontecer no Mês 2.</p>
+    </div>
+
+    <details class="fontes">
+      <summary>Fontes consultadas (setembro de 2026)</summary>
+      <ul>
+        <li><a href="https://sellsync.ai/pt/blog/taxa-mercado-pago-2026-guia-completo/" target="_blank" rel="noopener">Taxas Mercado Pago 2026: O Guia Completo Para Vendedores</a></li>
+        <li><a href="https://www.mercadopago.com.br/ajuda/tabela-taxas-tarifas_45243" target="_blank" rel="noopener">Tabela de taxas e tarifas — Mercado Pago</a></li>
+        <li><a href="https://www.mercadopago.com.br/developers/pt/docs/loja-integrada/additional-content/your-integrations/notifications/webhooks" target="_blank" rel="noopener">Webhooks - Notificações — Mercado Pago Developers</a></li>
+        <li><a href="https://www.calculadoradetaxas.com.br/pagseguro/taxas" target="_blank" rel="noopener">Tabela de Taxas da PagBank 2026</a></li>
+        <li><a href="https://www.calculadoradetaxas.com.br/public/pagseguro" target="_blank" rel="noopener">PagBank: Taxas, Maquininhas e Análise Completa 2026</a></li>
+        <li><a href="https://developer.pagbank.com.br/reference/confirmar-autenticidade-da-notificacao" target="_blank" rel="noopener">Confirmar autenticidade da notificação — PagBank Developers</a></li>
+      </ul>
+    </details>
+
+    <footer>Professor Global · comparação gerada para decisão do Item 3 (pagamento seguro) do Mês 1</footer>
+  </div>
+</body>
+</html>
