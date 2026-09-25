@@ -112,26 +112,6 @@ function render() {
     container.appendChild(item);
   });
 
-  const extrasContainer = document.getElementById("extras");
-  extrasContainer.innerHTML = "";
-
-  (typeof EXTRAS !== "undefined" ? EXTRAS : []).forEach((extra) => {
-    const card = document.createElement("div");
-    card.className = "extra-card";
-
-    const data = document.createElement("span");
-    data.className = "extra-data";
-    data.textContent = formatarData(extra.data);
-
-    const texto = document.createElement("p");
-    texto.className = "extra-texto";
-    texto.textContent = extra.texto;
-
-    card.appendChild(data);
-    card.appendChild(texto);
-    extrasContainer.appendChild(card);
-  });
-
   document.getElementById("atualizadoEm").textContent = formatarData(PROJECT.atualizadoEm);
 }
 

@@ -20,6 +20,11 @@
   .eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
   h1{font-size:32px;font-weight:800;letter-spacing:-.01em;margin:0 0 8px}
   .subtitulo{color:var(--muted);margin:0;max-width:64ch;line-height:1.55}
+  .alert-pending{display:flex;gap:14px;align-items:flex-start;background:#FBF3E4;border:1px solid #E8CE9C;border-radius:6px;padding:18px 20px;margin-bottom:32px}
+  .alert-dot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;background:#C08A2E;margin-top:6px;animation:alert-pulse 1.8s infinite}
+  @keyframes alert-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .alert-pending strong{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:#8A5D1E;display:block;margin-bottom:6px}
+  .alert-pending p{margin:0;color:#6B5432;font-size:14px;line-height:1.55;max-width:64ch}
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
   @media(max-width:760px){.grid{grid-template-columns:1fr}}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;text-decoration:none;color:inherit;display:block;transition:border-color .15s, transform .15s}
@@ -40,6 +45,14 @@
       <h1>Professor Global · Opções Visuais</h1>
       <p class="subtitulo">Quatro direções de design para a landing page do produto, pra comparar lado a lado antes de escolher um caminho. A opção 1 é a reprodução fiel do que já está no ar hoje; as outras três exploram direções novas de identidade visual.</p>
     </header>
+
+    <div class="alert-pending">
+      <span class="alert-dot"></span>
+      <div>
+        <strong>Aguardando resposta</strong>
+        <p>As 4 opções abaixo estão prontas para avaliação. O restante do Item 2 do Mês 1 (identidade visual) só segue adiante depois de uma escolha: pode ser uma das quatro direções, uma combinação entre elas, ou um pedido de ajuste.</p>
+      </div>
+    </div>
 
     <div class="grid">
       <a class="card" href="1-atual/">
