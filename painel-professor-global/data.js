@@ -12,7 +12,12 @@ const CHECKLIST = [
     mes: "Mês 1",
     itens: [
       { texto: "Levantamento técnico detalhado e organização do plano de arquitetura", feito: true },
-      { texto: "Início da identidade visual profissional (design system, páginas principais)", feito: false },
+      {
+        texto: "Início da identidade visual profissional (design system, páginas principais)",
+        feito: false,
+        alerta: "Aguardando resposta: 4 opções visuais já estão prontas para avaliação.",
+        alertaLink: "https://samuzaum.github.io/Portfolio/professorglobal-opcoes-visuais/",
+      },
       {
         texto: "Planejamento técnico da integração de pagamento seguro",
         feito: false,
@@ -21,12 +26,10 @@ const CHECKLIST = [
       {
         texto: "Correção de uma vulnerabilidade crítica de execução remota de código (Next.js atualizado)",
         feito: true,
-        nota: "Fora do escopo original dos 5 meses, feito por iniciativa própria em 16/09/2026, sem custo adicional, antes de iniciar a integração de pagamento do Mês 2.",
       },
       {
         texto: "Limite de tentativas (rate limiting) no login e cadastro, contra ataques de força bruta",
         feito: true,
-        nota: "Também fora do escopo original, feito junto com o item acima em 16/09/2026, sem custo adicional.",
       },
     ],
   },

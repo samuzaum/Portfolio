@@ -102,6 +102,26 @@ function render() {
         li.appendChild(nota);
       }
 
+      if (it.alerta) {
+        const alerta = document.createElement(it.alertaLink ? "a" : "div");
+        alerta.className = "item-alerta";
+        if (it.alertaLink) {
+          alerta.href = it.alertaLink;
+          alerta.target = "_blank";
+          alerta.rel = "noopener";
+        }
+
+        const alertaDot = document.createElement("span");
+        alertaDot.className = "alerta-dot";
+
+        const alertaTexto = document.createElement("span");
+        alertaTexto.textContent = it.alerta + (it.alertaLink ? " →" : "");
+
+        alerta.appendChild(alertaDot);
+        alerta.appendChild(alertaTexto);
+        li.appendChild(alerta);
+      }
+
       lista.appendChild(li);
     });
 
