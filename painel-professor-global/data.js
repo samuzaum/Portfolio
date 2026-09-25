@@ -21,6 +21,8 @@ const CHECKLIST = [
       {
         texto: "Planejamento técnico da integração de pagamento seguro",
         feito: false,
+        alerta: "Aguardando resposta: comparação entre Mercado Pago e PagSeguro já está pronta.",
+        alertaLink: "https://samuzaum.github.io/Portfolio/professorglobal-opcoes-visuais/gateway-pagamento/",
         nota: "Etapa de projeto, não só configuração: define como o pagamento vai ser validado com segurança nos meses seguintes.",
       },
       {
