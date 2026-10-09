@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Professor Global · Decisões Pendentes</title>
+<title>Professor Global · Decisões do Mês 1</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2336255c'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,19 +33,25 @@
   .swatches{display:flex;gap:6px;margin-bottom:6px}
   .sw{width:20px;height:20px;border-radius:4px;border:1px solid rgba(0,0,0,.1)}
   .open{font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700}
+  .status{display:inline-flex;align-items:center;gap:6px;margin-left:12px;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.03em;vertical-align:middle}
+  .status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+  .status-ok{color:#1b6b3d}
+  .status-pend{color:#8a5d1e}
+  .card-escolhida{border-color:var(--accent);background:rgba(54,37,92,.04)}
+  .tag-escolhida{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid var(--accent);border-radius:999px;font-family:var(--font-mono);font-size:10.5px;font-weight:700;color:var(--accent);vertical-align:middle}
   footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-family:var(--font-mono);font-size:11.5px}
 </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <p class="eyebrow">Mês 1 · Decisões pendentes</p>
-      <h1>Professor Global · Decisões Pendentes</h1>
-      <p class="subtitulo">Os dois pontos do Mês 1 que dependem de uma escolha antes de seguir adiante: qual direção visual seguir, e qual gateway de pagamento integrar no Mês 2.</p>
+      <p class="eyebrow">Mês 1 · Decisões</p>
+      <h1>Professor Global · Decisões do Mês 1</h1>
+      <p class="subtitulo">Os dois pontos do Mês 1 que dependiam de uma escolha: a direção visual, já definida (opção 3, Híbrida), e o gateway de pagamento a integrar no Mês 2, ainda em aberto.</p>
     </header>
 
-    <h2 class="secao-titulo">Decisão 1 · Identidade visual (Item 2)</h2>
-    <p class="secao-desc">Quatro direções de design para a landing page do produto, pra comparar lado a lado. A opção 1 é a reprodução fiel do que já está no ar hoje; as outras três exploram direções novas.</p>
+    <h2 class="secao-titulo">Decisão 1 · Identidade visual (Item 2)<span class="status status-ok">Decidida</span></h2>
+    <p class="secao-desc">Direção escolhida: opção 3 (Híbrida), que passa a ser a base do redesign das páginas principais. As outras três opções ficam aqui como referência.</p>
 
     <div class="grid">
       <a class="card" href="1-atual/">
@@ -64,10 +70,10 @@
         <span class="open">Ver opção 2 →</span>
       </a>
 
-      <a class="card" href="3-hibrida/">
+      <a class="card card-escolhida" href="3-hibrida/">
         <span class="card-num">03</span>
         <div class="swatches"><span class="sw" style="background:#F6F7FC"></span><span class="sw" style="background:#0B5FFF"></span><span class="sw" style="background:#7C5CF6"></span></div>
-        <h2>Híbrida</h2>
+        <h2>Híbrida<span class="tag-escolhida">Escolhida</span></h2>
         <p>Meio-termo real: estrutura clara e organizada como a institucional, mas com a energia cromática e a tipografia da versão atual. Mascote trocado por um mockup de celular com o chat da IA.</p>
         <span class="open">Ver opção 3 →</span>
       </a>
@@ -81,7 +87,7 @@
       </a>
     </div>
 
-    <h2 class="secao-titulo">Decisão 2 · Gateway de pagamento (Item 3)</h2>
+    <h2 class="secao-titulo">Decisão 2 · Gateway de pagamento (Item 3)<span class="status status-pend">Aguardando decisão</span></h2>
     <p class="secao-desc">Comparação entre Mercado Pago e PagSeguro, com taxas, parcelamento e como cada um valida a assinatura do webhook de pagamento.</p>
 
     <a class="card card-wide" href="gateway-pagamento/">
@@ -92,7 +98,7 @@
       <span class="open">Ver comparação →</span>
     </a>
 
-    <footer>Professor Global · decisões pendentes do Mês 1 (identidade visual e pagamento seguro)</footer>
+    <footer>Professor Global · decisões do Mês 1 (identidade visual decidida, pagamento seguro em aberto)</footer>
   </div>
 </body>
 </html>

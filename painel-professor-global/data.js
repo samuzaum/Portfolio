@@ -4,7 +4,7 @@
 const PROJECT = {
   nome: "Professor Global",
   subtitulo: "Redesign visual, pagamento seguro e catálogo dinâmico ao longo de 5 meses.",
-  atualizadoEm: "2026-09-25", // formato AAAA-MM-DD, mude toda vez que atualizar
+  atualizadoEm: "2026-10-09", // formato AAAA-MM-DD, mude toda vez que atualizar
 };
 
 const CHECKLIST = [
@@ -15,8 +15,7 @@ const CHECKLIST = [
       {
         texto: "Início da identidade visual profissional (design system, páginas principais)",
         feito: false,
-        alerta: "Aguardando resposta: 4 opções visuais já estão prontas para avaliação.",
-        alertaLink: "https://samuzaum.github.io/Portfolio/professorglobal-opcoes-visuais/",
+        nota: "Direção definida: opção 3 (Híbrida). Passa a ser a base do redesign das páginas principais.",
       },
       {
         texto: "Planejamento técnico da integração de pagamento seguro",
