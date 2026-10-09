@@ -14,8 +14,8 @@ const CHECKLIST = [
       { texto: "Levantamento técnico detalhado e organização do plano de arquitetura", feito: true },
       {
         texto: "Início da identidade visual profissional (design system, páginas principais)",
-        feito: false,
-        nota: "Direção definida: opção 3 (Híbrida). Passa a ser a base do redesign das páginas principais.",
+        feito: true,
+        nota: "Início entregue: quatro direções prototipadas e opção 3 (Híbrida) escolhida como base do redesign das páginas principais.",
       },
       {
         texto: "Planejamento técnico da integração de pagamento seguro",
