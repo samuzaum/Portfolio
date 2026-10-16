@@ -4,7 +4,7 @@
 const PROJECT = {
   nome: "Professor Global",
   subtitulo: "Redesign visual, pagamento seguro e catálogo dinâmico ao longo de 5 meses.",
-  atualizadoEm: "2026-10-09", // formato AAAA-MM-DD, mude toda vez que atualizar
+  atualizadoEm: "2026-10-16", // formato AAAA-MM-DD, mude toda vez que atualizar
 };
 
 const CHECKLIST = [
@@ -19,10 +19,8 @@ const CHECKLIST = [
       },
       {
         texto: "Planejamento técnico da integração de pagamento seguro",
-        feito: false,
-        alerta: "Aguardando resposta: comparação entre Mercado Pago e PagSeguro já está pronta.",
-        alertaLink: "https://samuzaum.github.io/Portfolio/professorglobal-opcoes-visuais/gateway-pagamento/",
-        nota: "Etapa de projeto, não só configuração: define como o pagamento vai ser validado com segurança nos meses seguintes.",
+        feito: true,
+        nota: "Gateway definido: Mercado Pago, começando pelo Pix. O plano de integração e de validação segura do pagamento está documentado.",
       },
       {
         texto: "Correção de uma vulnerabilidade crítica de execução remota de código (Next.js atualizado)",
@@ -37,12 +35,20 @@ const CHECKLIST = [
   {
     mes: "Mês 2",
     itens: [
-      { texto: "Finalização do redesign visual nas páginas principais", feito: false },
-      { texto: "Integração do gateway de pagamento real", feito: false },
+      {
+        texto: "Finalização do redesign visual nas páginas principais",
+        feito: true,
+        nota: "Direção Híbrida aplicada à landing, ao início, aos cursos e aulas, ao login, à compra, às ferramentas, aos materiais, ao perfil e à gestão, com menu lateral no computador e navegação inferior no celular. Falta apenas a conferência em aparelhos reais.",
+      },
+      {
+        texto: "Integração do gateway de pagamento real",
+        feito: false,
+        nota: "Em andamento: o código da cobrança por Pix já está feito. Falta a credencial de teste do Mercado Pago para validar contra o serviço real.",
+      },
       {
         texto: "Início da validação de assinatura do webhook de pagamento",
-        feito: false,
-        nota: "Item crítico de segurança: sem essa validação, confirmações de pagamento podem ser forjadas.",
+        feito: true,
+        nota: "Implementada, com consulta do pedido ao Mercado Pago antes de liberar o acesso, e coberta por testes automatizados. Ainda não foi testada contra o serviço real. Sem essa validação, confirmações de pagamento podem ser forjadas.",
       },
     ],
   },

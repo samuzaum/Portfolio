@@ -39,6 +39,12 @@
   .status-pend{color:#8a5d1e}
   .card-escolhida{border-color:var(--accent);background:rgba(54,37,92,.04)}
   .tag-escolhida{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid var(--accent);border-radius:999px;font-family:var(--font-mono);font-size:10.5px;font-weight:700;color:var(--accent);vertical-align:middle}
+  .extra{cursor:default}
+  .extra:hover{border-color:var(--line);transform:none}
+  .extra h3{font-size:17px;margin:0 0 10px}
+  .extra .rotulo{font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);display:block;margin:12px 0 4px}
+  .extra p{margin:0}
+  .aviso{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:6px;padding:16px 20px;margin:0 0 24px;font-size:14px;line-height:1.6;color:var(--ink);max-width:80ch}
   footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-family:var(--font-mono);font-size:11.5px}
 </style>
 </head>
@@ -47,7 +53,7 @@
     <header>
       <p class="eyebrow">Mês 1 · Decisões</p>
       <h1>Professor Global · Decisões do Mês 1</h1>
-      <p class="subtitulo">Os dois pontos do Mês 1 que dependiam de uma escolha: a direção visual, já definida (opção 3, Híbrida), e o gateway de pagamento a integrar no Mês 2, ainda em aberto.</p>
+      <p class="subtitulo">Os dois pontos do Mês 1 que dependiam de uma escolha: a direção visual, já definida (opção 3, Híbrida), e o gateway de pagamento, definido como Mercado Pago. No fim da página, uma lista de funções que não fazem parte do escopo combinado e ficam para decisão.</p>
     </header>
 
     <h2 class="secao-titulo">Decisão 1 · Identidade visual (Item 2)<span class="status status-ok">Decidida</span></h2>
@@ -87,8 +93,8 @@
       </a>
     </div>
 
-    <h2 class="secao-titulo">Decisão 2 · Gateway de pagamento (Item 3)<span class="status status-pend">Aguardando decisão</span></h2>
-    <p class="secao-desc">Comparação entre Mercado Pago e PagSeguro, com taxas, parcelamento e como cada um valida a assinatura do webhook de pagamento.</p>
+    <h2 class="secao-titulo">Decisão 2 · Gateway de pagamento (Item 3)<span class="status status-ok">Decidida</span></h2>
+    <p class="secao-desc">Gateway escolhido: Mercado Pago, começando pelo Pix. A comparação com o PagSeguro fica aqui como referência.</p>
 
     <a class="card card-wide" href="gateway-pagamento/">
       <span class="card-num">05</span>
@@ -98,7 +104,70 @@
       <span class="open">Ver comparação →</span>
     </a>
 
-    <footer>Professor Global · decisões do Mês 1 (identidade visual decidida, pagamento seguro em aberto)</footer>
+    <h2 class="secao-titulo">Extras · fora do escopo combinado</h2>
+    <p class="secao-desc">Ao analisar o sistema atual, identificamos funções que o aluno vê na tela, mas que ainda não foram construídas, ou que existiam na plataforma antiga. Elas não fazem parte do escopo combinado, e as telas correspondentes agora mostram um aviso claro, em vez de simular algo que não funciona.</p>
+    <p class="aviso">Cada item abaixo seria avaliado e orçado separadamente, e só entra no projeto se houver aprovação. Nenhum deles é necessário para concluir o escopo combinado.</p>
+
+    <div class="grid">
+      <div class="card extra">
+        <span class="card-num">E01</span>
+        <h3>Questionários com correção e nota</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>A tela de questionário existe, mas ainda não corrige nada: não há notas, tentativas nem resultado.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Ligar as questões do banco aos questionários, corrigir respostas, guardar tentativas e mostrar o resultado ao aluno.</p>
+      </div>
+      <div class="card extra">
+        <span class="card-num">E02</span>
+        <h3>Progresso e conclusão de aulas</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>O aluno não consegue marcar uma aula como concluída e o curso não mostra o quanto já foi feito.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Registrar a conclusão de cada aula, mostrar a barra de progresso no curso e no perfil, e permitir continuar de onde parou.</p>
+      </div>
+      <div class="card extra">
+        <span class="card-num">E03</span>
+        <h3>Atividades interativas (H5P)</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>As atividades interativas da plataforma antiga ainda não foram trazidas. A tela mostra um aviso no lugar.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Recriar essas atividades dentro do novo sistema ou incorporá-las por meio de um player. O esforço depende de quantas atividades serão trazidas.</p>
+      </div>
+      <div class="card extra">
+        <span class="card-num">E04</span>
+        <h3>Fórum de dúvidas</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>O fórum da plataforma antiga não existe na nova. A tela mostra um aviso no lugar.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Criar perguntas e respostas entre alunos e professores, com moderação. Costuma exigir também avisos por e-mail.</p>
+      </div>
+      <div class="card extra">
+        <span class="card-num">E05</span>
+        <h3>Questões do ENEM com enunciado em imagem</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>Parte das questões migradas tem o enunciado apenas como imagem, e por isso não aparece em texto para o aluno.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Trazer as imagens dos anexos e exibi-las na questão, ou transcrever os enunciados.</p>
+      </div>
+      <div class="card extra">
+        <span class="card-num">E06</span>
+        <h3>Conteúdo restante dos cursos</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>Algumas aulas ainda estão sem texto, arquivo ou vídeo. Os vídeos antigos têm endereço que não funciona mais.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Trazer o conteúdo completo dos cursos a partir dos backups da plataforma antiga, que precisam ser fornecidos. O volume será medido antes de qualquer estimativa.</p>
+      </div>
+      <div class="card extra">
+        <span class="card-num">E07</span>
+        <h3>Aplicativo para celular</h3>
+        <span class="rotulo">Como está hoje</span>
+        <p>Hoje o sistema abre no navegador e pode ser instalado na tela inicial, mas não funciona offline. O levantamento do escopo do aplicativo está previsto no Mês 4.</p>
+        <span class="rotulo">O que seria preciso</span>
+        <p>Em três etapas independentes: completar o modo instalável com funcionamento offline, publicar na loja do Android e, depois, publicar no iPhone, que exige mais trabalho. Dá para parar em qualquer etapa.</p>
+      </div>
+    </div>
+
+    <footer>Professor Global · decisões do Mês 1 (identidade visual e gateway de pagamento decididos) e extras para avaliação</footer>
   </div>
 </body>
 </html>
