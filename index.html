@@ -70,8 +70,8 @@
                 <p class="hero-role">Desenvolvedor Web · Python · Laravel · PHP</p>
                 <p class="hero-location"><i class="bi bi-geo-alt"></i> Ibirité, MG · Remoto</p>
                 <p class="hero-desc">
-                    Construindo soluções reais: do middleware em produção à API REST,
-                    com foco em back-end, automação e arquitetura organizada.
+                    Construindo soluções reais: de automações em produção a sistemas web completos,
+                    com foco em back-end e arquitetura organizada.
                 </p>
                 <div class="hero-actions">
                     <div class="hero-actions-row">
@@ -211,8 +211,8 @@
                         <ul class="timeline-bullets">
                             <li>Desenvolvi sozinho, do zero, um <strong>dashboard financeiro</strong> de faturamento e investimento por cliente (<strong>Next.js, React, TypeScript, Supabase/PostgreSQL</strong>), com motor de cálculo, versionamento de fechamentos e views materializadas <em>(em produção)</em>.</li>
                             <li>Desenvolvi sozinho, do zero, o <strong>portal de notas fiscais</strong> entre a agência e seus fornecedores (<strong>Laravel</strong>), com fluxo de aprovação, módulo de tesouraria, integração com Gmail API e mais de 600 testes automatizados <em>(em produção)</em>.</li>
-                            <li>Desenvolvimento e implementação de <strong>middleware Python</strong> para automação de extração e integração de dados via protocolo Intelbras <em>(em produção)</em>.</li>
-                            <li>Automação da <strong>newsletter semanal de tendências</strong> com IA em duas etapas (<strong>Make.com + Claude API</strong>) <em>(em produção)</em>.</li>
+                            <li>Automação em <strong>Python</strong> que consulta o controle de acesso <strong>Intelbras</strong> em horários agendados e registra a presença diária numa planilha que alimenta o BI da empresa <em>(em produção)</em>.</li>
+                            <li>Automação da <strong>newsletter semanal de tendências</strong> para o time criativo, produzida inteiramente por IA em duas etapas (<strong>Make.com + Claude API</strong>) <em>(em produção)</em>.</li>
                             <li>Automação de <strong>pesquisa de feedback</strong> entre colegas disparada por webhook na entrega de tarefas (<strong>Laravel + Google Sheets</strong>) <em>(em desenvolvimento)</em>.</li>
                             <li>Administração de <strong>IAM</strong> via Google Workspace, cobrindo 95% do parque de permissões com Princípio do Menor Privilégio.</li>
                             <li>Gestão do ciclo de vida do colaborador: <strong>onboarding/offboarding</strong> em ambiente híbrido (nuvem e servidor local).</li>
@@ -428,9 +428,9 @@
                 <article class="project-card-mini" data-project="middleware-intelbras" data-index="02" tabindex="0" role="button" aria-haspopup="dialog">
                     <div class="project-card-head">
                         <span class="dot live"></span>
-                        <h3>Middleware Intelbras</h3>
+                        <h3>Automação de Presença</h3>
                     </div>
-                    <span class="project-desc">Automação de extração e integração de dados via protocolo Intelbras</span>
+                    <span class="project-desc">Script Python agendado que registra quem veio presencialmente, a partir do controle de acesso Intelbras</span>
                     <div class="project-card-meta">
                         <span class="status-pill live">Em produção</span>
                         <span class="vis-stamp"><i class="bi bi-building"></i> Lápis Raro</span>
@@ -442,7 +442,7 @@
                         <span class="dot live"></span>
                         <h3>Newsletter GIЯO</h3>
                     </div>
-                    <span class="project-desc">Curadoria e redação de newsletter com duas etapas de IA, em produção pra agência toda</span>
+                    <span class="project-desc">Newsletter semanal de tendências para o time criativo, feita 100% por IA</span>
                     <div class="project-card-meta">
                         <span class="status-pill live">Em produção</span>
                         <span class="vis-stamp"><i class="bi bi-building"></i> Lápis Raro</span>
@@ -535,25 +535,25 @@
         <template id="tpl-middleware-intelbras">
             <div class="case">
                 <dl>
-                    <dt>Contexto</dt><dd>Dispositivos Intelbras expunham dados em protocolo proprietário, sem integração direta com os sistemas internos da empresa.</dd>
-                    <dt>Solução</dt><dd>Middleware em Python que extrai, normaliza e integra esses dados automaticamente, rodando em produção desde a implantação.</dd>
-                    <dt>Stack</dt><dd class="tags-row"><span class="tag">Python</span><span class="tag">Automação</span><span class="tag">Integração de dados</span></dd>
+                    <dt>Contexto</dt><dd>Saber quem trabalhou presencialmente na empresa dependia de consultar manualmente o controle de acesso Intelbras.</dd>
+                    <dt>Solução</dt><dd>Script em Python que roda todo dia em horários fixos, consulta os registros de entrada no controle de acesso e atualiza uma planilha com a presença de cada colaborador. Essa planilha alimenta um painel de BI usado pela empresa.</dd>
+                    <dt>Stack</dt><dd class="tags-row"><span class="tag">Python</span><span class="tag">Agendamento</span><span class="tag">Planilha</span></dd>
                 </dl>
             </div>
             <div class="flow">
                 <div class="flow-step">
-                    <div class="icon"><i class="bi bi-hdd-network"></i></div>
-                    <span>Dispositivos Intelbras</span>
+                    <div class="icon"><i class="bi bi-door-open"></i></div>
+                    <span>Controle de acesso</span>
                 </div>
                 <div class="flow-arrow"><i class="bi bi-arrow-right"></i></div>
                 <div class="flow-step highlight">
-                    <div class="icon"><i class="bi bi-cpu"></i></div>
-                    <span>Middleware Python</span>
+                    <div class="icon"><i class="bi bi-clock-history"></i></div>
+                    <span>Python agendado</span>
                 </div>
                 <div class="flow-arrow"><i class="bi bi-arrow-right"></i></div>
                 <div class="flow-step">
-                    <div class="icon"><i class="bi bi-database"></i></div>
-                    <span>Sistema interno</span>
+                    <div class="icon"><i class="bi bi-table"></i></div>
+                    <span>Planilha → BI</span>
                 </div>
             </div>
         </template>
@@ -561,9 +561,9 @@
         <template id="tpl-newsletter-giro">
             <div class="case">
                 <dl>
-                    <dt>Contexto</dt><dd>Produzir uma newsletter editorial de tendências toda semana consumia tempo manual de curadoria e redação.</dd>
+                    <dt>Contexto</dt><dd>O time criativo da agência precisava de insights semanais sobre tendências, e reunir e escrever isso à mão toda semana consumia tempo de curadoria e redação.</dd>
                     <dt>Solução</dt><dd>Automação que varre fontes de tendências e usa IA em duas etapas (uma extrai o que é relevante de cada fonte, outra edita e escreve no tom da marca), montando o e-mail final.</dd>
-                    <dt>Resultado</dt><dd>Em produção, enviada semanalmente para a agência toda.</dd>
+                    <dt>Resultado</dt><dd>Em produção: toda semana a newsletter chega pronta ao time criativo, sem ninguém precisar pesquisar ou escrever.</dd>
                     <dt>Stack</dt><dd class="tags-row"><span class="tag">Make.com</span><span class="tag">Claude (Anthropic API)</span></dd>
                 </dl>
             </div>
