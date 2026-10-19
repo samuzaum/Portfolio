@@ -507,6 +507,35 @@ html[data-theme="light"] .theme-toggle-star {
 .timeline-bullets li::before { content: '★'; position: absolute; left: 0; top: .05em; font-size: .6em; color: var(--accent); }
 .timeline-bullets strong { color: var(--ink); font-weight: 700; }
 .timeline-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+/* Linha que "desenha" a timeline no scroll (GSAP). Só aparece se o JS ativar. */
+.timeline { position: relative; }
+.timeline-progress {
+  position: absolute; left: -1px; top: 0; bottom: 0; width: 2px;
+  background: var(--accent); transform-origin: top; transform: scaleY(0);
+  display: none; pointer-events: none;
+}
+.timeline.gsap-ready .timeline-progress { display: block; }
+.timeline-item.lit .timeline-dot use { fill: var(--accent); stroke: var(--accent); }
+.timeline-item.lit .timeline-dot { filter: drop-shadow(0 0 6px var(--accent-soft)); }
+
+/* ── Números (contadores) ──────────────────────────────────── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-top: 2.4rem; max-width: 640px;
+}
+.stat { border-left: 3px solid var(--accent); padding: .2rem 0 .2rem 1rem; }
+.stat-num {
+  display: block; font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.stat-label { display: block; margin-top: .4rem; font-size: .82rem; color: var(--slate); }
+@media (max-width: 480px) {
+  .stats-row { gap: .6rem; }
+  .stat { padding-left: .7rem; }
+  .stat-label { font-size: .74rem; }
+}
 .tag {
   display: inline-block;
   font-family: var(--font-sans); font-size: .78rem; font-weight: 500; color: var(--slate);

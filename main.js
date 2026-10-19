@@ -376,3 +376,48 @@ if (cursorRing && window.matchMedia('(hover: hover)').matches) {
   }
   requestAnimationFrame(tickCursor);
 }
+
+/* ── GSAP: linha da timeline desenhando no scroll + contadores ── */
+/* Sem GSAP (CDN fora do ar) ou com movimento reduzido, fica tudo estático e já com os valores finais */
+if (window.gsap && window.ScrollTrigger && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const timeline = document.querySelector('.timeline');
+  const timelineProgress = document.querySelector('.timeline-progress');
+  if (timeline && timelineProgress) {
+    timeline.classList.add('gsap-ready');
+    gsap.to(timelineProgress, {
+      scaleY: 1,
+      ease: 'none',
+      scrollTrigger: { trigger: timeline, start: 'top 70%', end: 'bottom 70%', scrub: 0.4 },
+    });
+
+    // cada estrela acende quando a linha chega nela (mesmo ponto "70%" da tela)
+    timeline.querySelectorAll('.timeline-item').forEach((item) => {
+      const dot = item.querySelector('.timeline-dot');
+      ScrollTrigger.create({
+        trigger: dot,
+        start: 'top 70%',
+        onEnter: () => {
+          item.classList.add('lit');
+          gsap.fromTo(dot, { scale: 1.6 }, { scale: 1, duration: 0.5, ease: 'back.out(3)', clearProps: 'transform' });
+        },
+        onLeaveBack: () => item.classList.remove('lit'),
+      });
+    });
+  }
+
+  document.querySelectorAll('.stat-num[data-count]').forEach((el) => {
+    const target = Number(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const counter = { value: 0 };
+    el.textContent = '0' + suffix;
+    gsap.to(counter, {
+      value: target,
+      duration: 1.6,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+      onUpdate: () => { el.textContent = Math.round(counter.value) + suffix; },
+    });
+  });
+}
