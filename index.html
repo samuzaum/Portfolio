@@ -198,14 +198,16 @@
                         <div class="timeline-header">
                             <div>
                                 <h3>Lápis Raro</h3>
-                                <span class="timeline-role">Estagiário de T.I</span>
+                                <span class="timeline-role">Estagiário de TI</span>
                             </div>
                             <span class="timeline-date">abr/2026 – atual</span>
                         </div>
                         <ul class="timeline-bullets">
+                            <li>Desenvolvi sozinho, do zero, um <strong>dashboard financeiro</strong> de faturamento e investimento por cliente (<strong>Next.js, React, TypeScript, Supabase/PostgreSQL</strong>), com motor de cálculo, versionamento de fechamentos e views materializadas <em>(em produção)</em>.</li>
+                            <li>Desenvolvi sozinho, do zero, o <strong>portal de notas fiscais</strong> entre a agência e seus fornecedores (<strong>Laravel</strong>), com fluxo de aprovação, módulo de tesouraria, integração com Gmail API e mais de 600 testes automatizados <em>(em produção)</em>.</li>
                             <li>Desenvolvimento e implementação de <strong>middleware Python</strong> para automação de extração e integração de dados via protocolo Intelbras <em>(em produção)</em>.</li>
-                            <li>Desenvolvimento de funcionalidades em um dashboard interno de acompanhamento financeiro (<strong>Next.js, React, TypeScript, Supabase/PostgreSQL</strong>), incluindo modelagem de dados e otimização de consultas <em>(em desenvolvimento)</em>.</li>
-                            <li>Implementação e manutenção de um portal interno de gestão de documentos (<strong>Laravel</strong>), com integração de e-mail automatizada e cobertura de testes automatizados <em>(em produção)</em>.</li>
+                            <li>Automação da <strong>newsletter semanal de tendências</strong> com IA em duas etapas (<strong>Make.com + Claude API</strong>) <em>(em produção)</em>.</li>
+                            <li>Automação de <strong>pesquisa de feedback</strong> entre colegas disparada por webhook na entrega de tarefas (<strong>Laravel + Google Sheets</strong>) <em>(em desenvolvimento)</em>.</li>
                             <li>Administração de <strong>IAM</strong> via Google Workspace, cobrindo 95% do parque de permissões com Princípio do Menor Privilégio.</li>
                             <li>Gestão do ciclo de vida do colaborador: <strong>onboarding/offboarding</strong> em ambiente híbrido (nuvem e servidor local).</li>
                             <li>Migração de dados legados (CDs/HDs) para <strong>Google Drive</strong> com rotinas de backup e controle de integridade.</li>
@@ -217,6 +219,7 @@
                             <span class="tag">Next.js</span>
                             <span class="tag">TypeScript</span>
                             <span class="tag">Supabase</span>
+                            <span class="tag">Claude API</span>
                             <span class="tag">Google Workspace</span>
                             <span class="tag">IAM</span>
                             <span class="tag">GLPI</span>
@@ -293,6 +296,7 @@
                         <div class="tech-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
                         <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
                         <div class="tech-item"><i class="devicon-nextjs-original colored"></i><span>Next.js</span></div>
+                        <div class="tech-item"><i class="devicon-tailwindcss-plain colored"></i><span>Tailwind</span></div>
                         <div class="tech-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
                         <div class="tech-item"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
                     </div>
@@ -305,6 +309,8 @@
                         <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
                         <div class="tech-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
                         <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                        <div class="tech-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                        <div class="tech-item"><i class="bi bi-database tech-google-icon"></i><span>SQLite</span></div>
                         <div class="tech-item"><i class="bi bi-database tech-google-icon"></i><span>Supabase</span></div>
                     </div>
                 </div>
@@ -313,6 +319,9 @@
                     <div class="tech-icons">
                         <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
                         <div class="tech-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                        <div class="tech-item"><i class="bi bi-check2-circle tech-google-icon"></i><span>PHPUnit</span></div>
+                        <div class="tech-item"><i class="bi bi-stars tech-google-icon"></i><span>Claude API</span></div>
+                        <div class="tech-item"><i class="bi bi-diagram-3 tech-google-icon"></i><span>Make.com</span></div>
                         <div class="tech-item"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
                         <div class="tech-item"><i class="bi bi-google tech-google-icon"></i><span>G. Workspace</span></div>
                     </div>
@@ -332,7 +341,7 @@
                 <h2 class="section-title">O que eu já construí</h2>
                 <p style="color:var(--slate);margin-top:.8rem;max-width:58ch;font-size:1rem;">
                     De projetos pessoais a sistemas em produção na Lápis Raro, empresa onde trabalho hoje.
-                    Cada um com o contexto, a stack e o resultado.
+                    Cada um com o contexto, a stack e, quando já dá pra medir, o resultado.
                 </p>
                 <p style="color:var(--slate);opacity:.75;margin-top:.5rem;font-size:.85rem;">
                     Clique em um projeto pra abrir os detalhes.
@@ -479,7 +488,8 @@
                 <dl>
                     <dt>Contexto</dt><dd>Faturamento e investimento por cliente eram acompanhados sem visão consolidada nem histórico confiável.</dd>
                     <dt>Solução</dt><dd>Sistema em produção que desenvolvo e mantenho sozinho, do zero: motor de cálculo que aplica correções sem sobrescrever dado importado, versionamento de metas e fechamentos, views materializadas para manter o painel rápido com anos de histórico, e reforço de controle de acesso a nível de linha.</dd>
-                    <dt>Stack</dt><dd class="tags-row"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span></dd>
+                    <dt>Resultado</dt><dd>Em produção, usado pela equipe para acompanhar faturamento e investimento de cada cliente com histórico consolidado.</dd>
+                    <dt>Stack</dt><dd class="tags-row"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span></dd>
                 </dl>
             </div>
         </template>
@@ -488,8 +498,9 @@
             <div class="case">
                 <dl>
                     <dt>Contexto</dt><dd>Notas fiscais entre a empresa e fornecedores/veículos de mídia circulavam sem fluxo formal nem histórico de aprovação.</dd>
-                    <dt>Solução</dt><dd>Portal em Laravel que desenvolvo e mantenho sozinho, com dois acessos (equipe e fornecedor), workflow de aprovação com estados e auditoria, integração com Gmail que identifica e organiza automaticamente as respostas dos fornecedores por e-mail, e cobertura de testes automatizados sobre autenticação, aprovação e isolamento de dados entre fornecedores.</dd>
-                    <dt>Stack</dt><dd class="tags-row"><span class="tag">Laravel</span><span class="tag">Gmail API</span><span class="tag">Testes automatizados</span></dd>
+                    <dt>Solução</dt><dd>Portal em Laravel que desenvolvi do zero e mantenho sozinho, com dois acessos (equipe e fornecedor) e quatro perfis internos com carteira de clientes por analista. O fornecedor envia a nota e acompanha o status; a equipe aprova, recusa ou pede complemento, com e-mail automático em cada etapa. A integração com Gmail identifica e organiza as respostas dos fornecedores por e-mail. Inclui módulo de tesouraria (comprovantes, pagamento em lote, exportação e alerta de possível duplicidade), área de DP e auditoria de quem fez o quê e quando.</dd>
+                    <dt>Resultado</dt><dd>Em produção, recebendo as notas dos fornecedores da agência. Mais de 600 testes automatizados cobrindo autenticação, aprovação e isolamento de dados entre fornecedores. Um fornecedor elogiou o portal e pediu o contato de quem o desenvolveu.</dd>
+                    <dt>Stack</dt><dd class="tags-row"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">Tailwind</span><span class="tag">SQLite</span><span class="tag">Gmail API</span><span class="tag">PHPUnit</span></dd>
                 </dl>
             </div>
             <div class="flow">
@@ -504,8 +515,13 @@
                 </div>
                 <div class="flow-arrow"><i class="bi bi-arrow-right"></i></div>
                 <div class="flow-step">
-                    <div class="icon"><i class="bi bi-envelope-check"></i></div>
-                    <span>Aprovação por e-mail</span>
+                    <div class="icon"><i class="bi bi-clipboard-check"></i></div>
+                    <span>Análise e aprovação</span>
+                </div>
+                <div class="flow-arrow"><i class="bi bi-arrow-right"></i></div>
+                <div class="flow-step">
+                    <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                    <span>Tesouraria</span>
                 </div>
             </div>
         </template>
@@ -541,6 +557,7 @@
                 <dl>
                     <dt>Contexto</dt><dd>Produzir uma newsletter editorial de tendências toda semana consumia tempo manual de curadoria e redação.</dd>
                     <dt>Solução</dt><dd>Automação que varre fontes de tendências e usa IA em duas etapas (uma extrai o que é relevante de cada fonte, outra edita e escreve no tom da marca), montando o e-mail final.</dd>
+                    <dt>Resultado</dt><dd>Em produção, enviada semanalmente para a agência toda.</dd>
                     <dt>Stack</dt><dd class="tags-row"><span class="tag">Make.com</span><span class="tag">Claude (Anthropic API)</span></dd>
                 </dl>
             </div>
@@ -618,6 +635,7 @@
                 <dl>
                     <dt>Contexto</dt><dd>Almoxarifado físico sem rastreabilidade de posição, gerando perda de tempo e itens extraviados.</dd>
                     <dt>Solução</dt><dd>Sistema de controle de estoque com otimização de armazenamento e rastreabilidade de produtos. Atuei como Scrum Master do time.</dd>
+                    <dt>Resultado</dt><dd>Concluído e apresentado como TCC do curso técnico.</dd>
                     <dt>Stack</dt><dd class="tags-row"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">Ajax</span></dd>
                 </dl>
                 <a class="project-link" href="https://github.com/samuzaum/Stock360" target="_blank" rel="noopener noreferrer">↗ ver repositório</a>
