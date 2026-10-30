@@ -4,7 +4,7 @@
 const PROJECT = {
   nome: "Professor Global",
   subtitulo: "Redesign visual, pagamento seguro e catálogo dinâmico ao longo de 5 meses.",
-  atualizadoEm: "2026-10-16", // formato AAAA-MM-DD, mude toda vez que atualizar
+  atualizadoEm: "2026-10-30", // formato AAAA-MM-DD, mude toda vez que atualizar
 };
 
 const CHECKLIST = [
@@ -43,7 +43,7 @@ const CHECKLIST = [
       {
         texto: "Integração do gateway de pagamento real",
         feito: false,
-        nota: "Em andamento: o código da cobrança por Pix já está feito. Falta a credencial de teste do Mercado Pago para validar contra o serviço real.",
+        nota: "Em andamento: a cobrança por Pix foi testada no ambiente de testes do Mercado Pago, do pedido até a liberação do acesso ao curso. Falta testar o aviso automático de pagamento, que depende de um endereço público para o site.",
       },
       {
         texto: "Início da validação de assinatura do webhook de pagamento",
