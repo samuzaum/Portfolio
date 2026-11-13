@@ -4,7 +4,7 @@
 const PROJECT = {
   nome: "Professor Global",
   subtitulo: "Redesign visual, pagamento seguro e catálogo dinâmico ao longo de 5 meses.",
-  atualizadoEm: "2026-11-03", // formato AAAA-MM-DD, mude toda vez que atualizar
+  atualizadoEm: "2026-11-13", // formato AAAA-MM-DD, mude toda vez que atualizar
 };
 
 const CHECKLIST = [
@@ -58,14 +58,18 @@ const CHECKLIST = [
       {
         texto: "Segurança do pagamento validada e testada ponta a ponta",
         feito: false,
-        nota: "Fecha o ponto de maior risco do projeto: fraude na confirmação de pagamento.",
+        nota: "Já feito: tratamento de pedidos cancelados e expirados, conferência automática de pagamentos pendentes, confirmação protegida contra avisos simultâneos e testes automatizados. Falta o teste do aviso real do Mercado Pago, que exige o site em um endereço público com HTTPS e a conta da empresa.",
       },
       {
         texto: "Catálogo de cursos migrado do arquivo estático para o banco de dados",
-        feito: false,
-        nota: "Envolve dados já migrados do Moodle; exige validação cuidadosa para não perder ou duplicar conteúdo.",
+        feito: true,
+        nota: "Cursos, aulas e questões vêm do banco. Uma validação automática compara o arquivo migrado com o banco, curso por curso (670 cursos, 6.025 questões, nada perdido). Cursos que eram fundidos por engano foram separados, títulos foram limpos e as questões repetidas ficaram escondidas (restam 2.804 visíveis).",
       },
-      { texto: "Tutor de IA ativado e testado", feito: false },
+      {
+        texto: "Tutor de IA ativado e testado",
+        feito: false,
+        nota: "Já feito: limites de uso por aluno, registro de consumo e validação dos pedidos, testados com um simulador. Falta a chave da OpenAI e o teste com o serviço real; o limite final depende de quem paga o uso.",
+      },
     ],
   },
   {
